@@ -45,6 +45,6 @@ Es necesario poseer un entorno de SQL Server o PostgreSQL funcional.
 2.  Si la conexión a la base de datos no se actualiza automáticamente, ve a **Transformar datos** > **Configuración de origen de datos** y ajusta las credenciales y la ruta de tu servidor SQL local.
 
 ---
-**Analista:** [Tu Nombre/Apellido]
+**Analista:** Matías Ortiz
 **Curso:** Data Analytics — Coderhouse
-**Año:** 2024
+**Año:** 2026
