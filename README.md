@@ -1,31 +1,50 @@
-# Curso de Data Analytics - Coderhouse
+# Proyecto Integral de Analítica de Datos — RetailPro
 
-Este repositorio documenta mi progreso, ejercicios prácticos y proyectos desarrollados durante el curso de Data Analytics de Coderhouse. Aquí se abordan los fundamentos del análisis de datos, el modelado relacional y la implementación de soluciones de negocio mediante SQL y herramientas de BI.
+## Descripción del Proyecto
 
-## 📂 Estructura del Repositorio
-El contenido está organizado siguiendo la evolución lógica del curso:
-1. Fundamentos del Análisis de Datos
-    - Conceptos clave: Diferencia entre datos e información, proceso de transformación (contexto, calidad, agregación).
-    - Ciclo de vida del análisis: Definición del problema, recolección, limpieza, análisis exploratorio (EDA), comunicación y toma de decisiones.
-    - Metodología: Enfoque profesional para evitar errores comunes (sesgos, confusión entre correlación y causalidad).
+Este repositorio documenta el desarrollo de una solución integral de Business Intelligence (BI) para **RetailPro**, una empresa distribuidora de productos tecnológicos que opera en diversas regiones de Latinoamérica.
 
-2. Diseño de Bases de Datos
-    - Normalización (1NF, 2NF, 3NF): Prácticas realizadas para garantizar la integridad referencial y eliminar redundancias en los datos.
-    - Modelado Relacional: Diseño de estructuras de datos para sistemas de ventas y gestión.
-    - Implementación SQL: Scripts DDL para la creación de tablas, definición de llaves primarias (PK) y foráneas (FK).
+El proyecto aborda los desafíos operativos y estratégicos identificados para el periodo 2023-2024, centrando los esfuerzos en tres objetivos clave:
+1.  **Optimización de KPIs de Ventas:** Implementación de un seguimiento robusto de métricas core como Margen de Ganancia y Ticket Promedio.
+2.  **Gestión de Inventario:** Desarrollo de análisis detallados para optimizar la rotación de stock y evitar quiebres.
+3.  **Reactivación Regional:** Identificación de las causas subyacentes del bajo rendimiento en el territorio **Norte** para proponer estrategias de recuperación basadas en datos.
 
-3. Proyectos Prácticos
-    - CoffeeInsight: Propuesta integral de análisis de negocio para una cadena de cafeterías, aplicando el flujo completo (recolección, limpieza, análisis y visualización) para diagnosticar la caída de ventas.
-    - RetailPro: Proyecto principal del curso que abarca:
-        - Brief Analítico: Definición estratégica del problema, identificación de fuentes y KPIs clave.
-        - Modelo de Datos: Arquitectura relacional normalizada hasta la 3NF para soportar el análisis de ventas, clientes y productos.
-        - Dashboard: Diseño de visualización ejecutiva para el seguimiento de rendimiento.
-    - RetroVibes: Ejercicio técnico de normalización para un sistema de videoclub.
+## Herramientas y Tecnologías Utilizadas
 
-## 🛠 Herramientas Utilizadas
-    - Base de Datos: SQL (PostgreSQL/SQL Server).
-    - Análisis y Limpieza: Excel Avanzado (funciones de agregación y segmentación).
-    - Visualización: Power BI / Herramientas de Storytelling.
+* **Motor de Base de Datos Relacional:** PostgreSQL / SQL Server (DDL, DML, DQL avanzada).
+* **Business Intelligence & Visualización:** Power BI Desktop.
+* **Pipeline ETL:** Power Query y Lenguaje M.
+* **Cálculo y Modelado:** DAX (Data Analysis Expressions).
+* **Documentación y Optimización:** Inteligencia Artificial Generativa utilizada como co-piloto para validación técnica.
 
-## 🚀 Objetivo del Curso:
-El objetivo principal es aprender a convertir datos brutos en decisiones estratégicas, pasando de la intuición ("instinto") a la toma de decisiones basada en hechos concretos mediante una metodología profesional de análisis.
+## Estructura del Repositorio
+
+El proyecto se desarrolla de forma modular, reflejando la progresión del flujo de trabajo analítico. Las entregas se organizan en las siguientes carpetas:
+
+* 📂 `m1_brief/`: Contiene el **Brief Analítico** inicial que define el problema de negocio, objetivos y alcance de RetailPro.
+* 📂 `m3_ddl/`: Incluye los scripts **DDL** (`Data Definition Language`) para la creación de las tablas, claves primarias y foráneas de la base de datos `Ventas_Tech_DB` (modelo relacional normalizado).
+* 📂 `m4_dql/`: Contiene los scripts **DML** (`Data Manipulation Language`) para la carga de datos iniciales y los scripts **DQL** (`Data Query Language`) con las consultas analíticas avanzada avanzada (agregaciones, JOINs complejos) para el análisis de Retail.
+* 📂 `m6_m7_etl_powerbi/`: Aloja el archivo `.pbix` con el pipeline **ETL** completo desarrollado en Power Query y Lenguaje M, asegurando la limpieza y tipado de datos antes del modelado.
+* 📂 `m8_dax/`: Incluye el reporte final modelado en Power BI con la tabla de medidas **DAX** y el dashboard diseñado para el seguimiento de RetailPro.
+
+## Instrucciones para Reproducir el Proyecto
+
+Para replicar el entorno de análisis y el reporte de Power BI, sigue estos pasos en el orden indicado:
+
+### 1. Configuración de la Base de Datos SQL
+
+Es necesario poseer un entorno de SQL Server o PostgreSQL funcional.
+
+1.  **Crear Base de Datos:** Crea una base de datos limpia con el nombre `Ventas_Tech_DB`.
+2.  **Ejecutar Script DDL (Estructura):** Ejecuta en orden los scripts ubicados en `m3_ddl/` para crear las tablas y relaciones (`clientes`, `productos`, `territorios`, `ventas`). **No** ejecutes la carga de datos todavía.
+3.  **Ejecutar Script DML (Carga de Datos):** Una vez que las estructuras estén creadas correctamente, ejecuta los scripts de carga de datos ubicados en `m4_dql/`. *Nota: El orden es crítico para respetar las restricciones de claves foráneas.*
+
+### 2. Configuración de Power BI
+
+1.  Abre Power BI Desktop y carga el archivo `.pbix` final ubicado en `m8_dax/`.
+2.  Si la conexión a la base de datos no se actualiza automáticamente, ve a **Transformar datos** > **Configuración de origen de datos** y ajusta las credenciales y la ruta de tu servidor SQL local.
+
+---
+**Analista:** [Tu Nombre/Apellido]
+**Curso:** Data Analytics — Coderhouse
+**Año:** 2024
